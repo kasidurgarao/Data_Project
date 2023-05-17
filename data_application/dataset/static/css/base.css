@@ -1,0 +1,97 @@
+.bg-light {
+  background-color: #33ffe3 !important;
+}
+.brand a {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.brand a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff0505;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.brand a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.home-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.home-page h1 {
+  color: #33ffe3;
+  opacity: 0.6;
+}
+
+.file-upload h1 {
+  font-size: 16px;
+  font-family: inter;
+  font-weight: 500;
+  border: 2px solid #67bce2;
+  width: 175px;
+  padding: 9px 10px;
+  margin: 0;
+}
+.input-file {
+  margin-top: 26%;
+}
+.input-file h1 {
+  font-size: 16px;
+  font-family: inter;
+  font-weight: 500;
+  border: 2px solid #000000;
+  padding: 7px 10px;
+  margin: 0;
+}
+.input-file button {
+  position: relative;
+  top: -80px;
+  right: -250px;
+  border-radius: 10%;
+  font-weight: 500;
+  background: #33ffe3;
+  color: black;
+  font-size: 19px;
+  padding: 0px 10px;
+  height: 38px;
+}
+
+.select select {
+  padding: 20px 30px;
+}
+.input input {
+  padding: 10px 20px;
+}
+.compare button {
+  font-weight: 500;
+  background: #33ffe3;
+  color: black;
+  font-size: 19px;
+  padding: 0px 10px;
+  height: 38px;
+}
+.logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+#upload-form{
+    background: #33ffe3
+}

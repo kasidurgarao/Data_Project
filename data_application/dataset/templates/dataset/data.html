@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<link href="{% static 'css/base.css' %}" rel="stylesheet"/>
+<title>Title</title>
+</head>
+<body>
+
+    <div class="container">
+ <nav class="navbar navbar-light bg-light justify-content-between">
+  <a class="navbar-brand">Navbar</a>
+
+
+  <div class="brand">
+
+  <a class="navbar-brand" href="home">Home</a>
+  <a class="navbar-brand" href="data">Data</a>
+  <a class="navbar-brand" href="plot">Plot</a>
+
+  </div>
+</nav>
+    </div>
+    <div class="home-page">
+		<h1>welcome to home page</h1>
+    </div>
+    <div class="container">
+         <div class="file-upload mt-md-3">
+             <h1>Data file 1</h1>
+             <h1>Data file 1</h1>
+             <h1>Data file 1</h1>
+             <h1>Data file 1</h1>
+             <h1>Data file 1</h1>
+         </div>
+
+            <form class="input-file"  method="POST" enctype="multipart/form-data"  >
+                {% csrf_token %}
+                <div class="form outline">
+                    {{form.as_p}}
+                    {{info.as_p}}
+                <br>
+                </div>
+<!--              <label for="file-input">Upload CSV file:</label>-->
+<!--              <input type="file" id="file-input" name="file-input"><br><br>-->
+<!--              <label for="dataset-name">Dataset name:</label>-->
+<!--              <input type="text" id="dataset-name" name="dataset-name">-->
+              <button class="btn ml-md-3" id="submit">upload</button>
+            </form>
+
+
+        </div>
+    <br><br>
+
+<!--    <table id="dataset-table">-->
+<!--      <thead>-->
+<!--        <tr>-->
+<!--          <th>Dataset Name</th>-->
+<!--          <th>Select</th>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <th>data file</th>-->
+<!--            <th>select</th>-->
+<!--        </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--      </tbody>-->
+<!--    </table>-->
+
+
+
+
+<!--    <div class="input-file">-->
+<!--         <input type="file" id="input">-->
+<!--         <div class="d-flex mt-md-3">-->
+<!--             <h1 id="log">data file name</h1>-->
+<!--             <button class="btn ml-md-3">upload</button>-->
+<!--         </div>-->
+<!--    </div>-->
+<!-- </div>-->
+
+
+
+
+
+</body>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script async src="script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
+
